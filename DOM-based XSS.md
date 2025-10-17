@@ -52,12 +52,12 @@ Son utilisation est très efficace pour corriger les vulnérabilités, car les e
 
 
 - utiliser textContent quand l’utilisation de HTML n’est pas nécessaire et encoder les entrées utilisateurs avec une fonction de ce type :
-<div>
- function htmlEncode(str){
-  return String(str).replace(/[^\w. ]/gi, function(c){
-     return '&#'+c.charCodeAt(0)+';';
-  });
-</div>
+
+## function htmlEncode(str){
+##   return String(str).replace(/[^\w. ]/gi, function(c){
+##      return '&#'+c.charCodeAt(0)+';';
+##   });
+
 
 - Eviter les sources controle par l'utilisateur. Au cas ou une fonctionnalite l'oblige alors une validation cote client devra etre mise en place en utilisant des whiteList afin d'autorise  seulement du contenu de confiance.
 
